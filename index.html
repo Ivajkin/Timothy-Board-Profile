@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timothy Ivaikin - Executive Portfolio</title>
+    <meta name="description" content="Explore the professional portfolio of Timothy Ivaikin, showcasing his leadership, strategic vision, and contributions to the tech industry.">
+    <meta name="keywords" content="Timothy Ivaikin, tech leader, strategic innovator, portfolio, leadership, technology">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background: #f4f4f4;
@@ -15,10 +17,24 @@
         header, section, footer {
             margin: auto;
             padding: 20px;
-            max-width: 600px;
+            max-width: 800px;
         }
-        h1, h2 {
+        header {
+            text-align: center;
+            background: #0056b3;
+            color: white;
+            padding: 40px 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        h2 {
             color: #0056b3;
+            margin-top: 40px;
         }
         p {
             line-height: 1.6;
@@ -36,11 +52,15 @@
             border-radius: 5px;
             text-align: center;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
-        .testimonial {
+        .button:hover {
+            background-color: #004494;
+        }
+        .testimonial, .influential-connections {
             background: white;
             border: 1px solid #ccc;
-            padding: 10px;
+            padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
         }
@@ -48,22 +68,28 @@
             background: #222;
             color: white;
             text-align: center;
+            padding: 20px;
         }
-        .influential-connections {
-            background: #e7f3ff;
-            border: 1px solid #cce5ff;
-            padding: 10px;
-            margin: 20px 0;
-            border-radius: 5px;
+        @media (max-width: 600px) {
+            header, section, footer {
+                padding: 15px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Professional Portfolio of Timothy Ivaikin</h1>
-        <p>"Leveraging Global Tech Leadership to Drive Strategic Innovation and Sustainable Growth"</p>
-    </header>
+<header>
+    <h1>Welcome to the Professional Portfolio of Timothy Ivaikin</h1>
+    <p>"Leveraging Global Tech Leadership to Drive Strategic Innovation and Sustainable Growth"</p>
+</header>
 
+<main>
     <section>
         <h2>About Timothy</h2>
         <p>Timothy Ivaikin is a seasoned Chief Technology Officer and a visionary tech leader with over 15 years of experience spearheading transformative projects in multinational environments. Currently the Technical Leader for Business to Government (B2G) and Business Events departments. Previously Chief Technology Officer at Infijoy, Timothy's leadership has been pivotal in deploying scalable eLearning solutions and well-being platforms across 100+ countries.</p>
@@ -119,9 +145,10 @@
         <p>"Timothy is a strategic thinker whose expertise in tech has been instrumental in scaling our operations internationally with efficiency and integrity." - <em>CEO, Infijoy</em></p>
         <p>"His ability to navigate complex global markets and lead with a forward-thinking approach makes him an ideal candidate for any board seeking robust and innovative leadership." - <em>Former Board Chair, Tech Giant</em></p>
     </section>
+</main>
 
-    <footer>
-        <p>Leverage Timothy’s strategic and innovative expertise to enhance your board’s effectiveness and drive sustainable growth. Discover how his visionary leadership can shape the future of your organization.</p>
-    </footer>
+<footer>
+    <p>Leverage Timothy’s strategic and innovative expertise to enhance your board’s effectiveness and drive sustainable growth. Discover how his visionary leadership can shape the future of your organization.</p>
+</footer>
 </body>
 </html>
