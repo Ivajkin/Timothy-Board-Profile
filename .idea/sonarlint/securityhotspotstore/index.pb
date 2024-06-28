@@ -16,3 +16,13 @@ w
 G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b/4/b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
 w
 G.idea/sonarlint/issuestore/f/6/f6013a00b362253c64368d6eebc50ea2131754e2,4/0/40eb5791e20bdb25d1a3bafa3bea91bedb886b5e
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+P
+ discover-culture-initiative.html,b/d/bdc5a79ea3075ae1ad1ce233014673bb88b5bf24
+9
+	style.css,4/6/46e3381e9569c09e85a30b9e5a2af7525ee9fd78
+:
+
+styles.css,0/1/01397909c5f00e9fa017aa0ff73335d37fecc70f
