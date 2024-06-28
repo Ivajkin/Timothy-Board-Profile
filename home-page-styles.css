@@ -87,7 +87,6 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 20px;
-    margin-bottom: 160px;
 }
 
 @media (max-width: 600px) {
@@ -105,8 +104,8 @@ footer {
 }
 
 .social-buttons {
-    margin: 20px 0;
     text-align: center;
+    margin: 20px 0 160px;
 }
 .social-buttons a {
     display: inline-block;
