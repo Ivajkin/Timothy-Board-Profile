@@ -87,6 +87,7 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 20px;
+    margin-bottom: 160px;
 }
 
 @media (max-width: 600px) {
