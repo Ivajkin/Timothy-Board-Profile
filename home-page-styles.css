@@ -1,73 +1,103 @@
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #004494;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --link-color: #0066c0;
+    --header-bg-color: #0056b3;
+    --footer-bg-color: #222;
+    --white: #ffffff;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
-    color: #333;
+    background: var(--background-color);
+    color: var(--text-color);
 }
+
 header, section, footer {
     margin: auto;
     padding: 20px;
     max-width: 800px;
 }
+
 header {
     text-align: center;
-    background: #0056b3;
-    color: white;
+    background: var(--header-bg-color);
+    color: var(--white);
     padding: 40px 20px;
 }
+
 header h1 {
     margin: 0;
     font-size: 2em;
 }
+
 header p {
     font-size: 1.2em;
 }
+
 h2 {
-    color: #0056b3;
+    color: var(--primary-color);
     margin-top: 40px;
 }
+
 p {
     line-height: 1.6;
 }
+
 a {
-    color: #0066c0;
+    color: var(--link-color);
     text-decoration: none;
 }
+
 .button {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
-    background-color: #0056b3;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
 .button:hover {
-    background-color: #004494;
+    background-color: var(--secondary-color);
 }
+
+.button:focus {
+    outline: 3px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
 .testimonial, .influential-connections {
-    background: white;
+    background: var(--white);
     border: 1px solid #ccc;
     padding: 20px;
     margin: 20px 0;
     border-radius: 5px;
 }
+
 footer {
-    background: #222;
-    color: white;
+    background: var(--footer-bg-color);
+    color: var(--white);
     text-align: center;
     padding: 20px;
 }
+
 @media (max-width: 600px) {
     header, section, footer {
         padding: 15px;
     }
+
     header h1 {
         font-size: 1.5em;
     }
+
     header p {
         font-size: 1em;
     }
