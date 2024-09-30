@@ -1,107 +1,178 @@
 /* General styles */
+:root {
+    /* CSS variables for easy theming */
+    --primary-color: #004080; /* Corporate blue */
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 /* Header styles */
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 1em 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
+header p {
+    margin-top: 0.5em;
+    font-size: 1.2em;
 }
 
 /* Main content styles */
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: var(--max-width);
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 h2 {
-    color: #4CAF50;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+p, li {
+    font-size: 1em;
+    line-height: 1.8;
 }
 
 ul {
-    list-style: disc;
+    list-style: disc inside;
+    margin: 10px 0 20px 0;
     padding-left: 20px;
 }
 
-blockquote {
-    background-color: #f9f9f9;
-    border-left: 10px solid #4CAF50;
-    margin: 10px 0;
-    padding: 10px 20px;
-    font-style: italic;
+.case-study, .testimonial-item {
+    background-color: var(--white);
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.case-study details summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.metrics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.metric-item {
+    flex: 1 1 30%;
+    background-color: #e0f0ff;
+    color: var(--primary-color);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.metric-item strong {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-buttons, .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.button, .social-links a {
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover, .social-links a:hover {
+    background-color: #003366;
 }
 
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    margin-top: 40px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
+footer p {
+    margin: 5px 0;
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
-    header nav ul li {
-        display: block;
-        margin: 5px 0;
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
     }
 
-    main {
-        margin: 10px;
-        padding: 10px;
+    .metrics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metric-item {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        min-width: 180px;
+    }
+
+    .button, .social-links a {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .button, .social-links a {
+        width: 100%;
     }
 }
