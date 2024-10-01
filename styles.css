@@ -143,7 +143,7 @@ footer p {
 /* Testimonials Section */
 .testimonials {
     background-color: var(--background-color);
-    padding: 40px 20px;
+    padding: 0 20px;
 }
 
 .testimonials h2 {
@@ -170,13 +170,33 @@ footer p {
     color: var(--secondary-color);
 }
 
+.testimonial-item blockquote {
+    position: relative;
+    padding-left: 30px; /* Add padding to make space for the quote */
+    font-style: italic;
+}
+
+/* Styling the open quote */
 .testimonial-item blockquote:before {
     content: open-quote;
-    font-size: 4em;
+    font-size: 3em; /* Slightly smaller to avoid overwhelming the text */
     color: var(--primary-color);
     position: absolute;
-    left: 10px;
-    top: -10px;
+    left: 0; /* Align it perfectly with the start of the text */
+    top: 0; /* Align it with the top of the text */
+    line-height: 1; /* Makes sure it aligns properly with the text line */
+    opacity: 0.6; /* Slight transparency for a subtle effect */
+}
+
+/* Styling the close quote */
+.testimonial-item blockquote:after {
+    content: close-quote;
+    font-size: 3em;
+    color: var(--primary-color);
+    position: absolute;
+    right: 10px; /* Position close to the right edge of the blockquote */
+    bottom: -10px; /* Slightly below the text for visual balance */
+    opacity: 0.6; /* Same transparency for consistency */
 }
 
 .testimonial-item blockquote p {
@@ -218,6 +238,9 @@ footer p {
 .slick-dots li.slick-active button:before {
     opacity: 1;
     color: var(--primary-color);
+}
+.slick-dots {
+    margin-bottom: 30px;
 }
 
 /* Responsive design */
@@ -268,5 +291,163 @@ footer p {
     .testimonial-author img {
         width: 60px;
         height: 60px;
+    }
+}
+
+/* Enhancing testimonials carousel */
+
+/* Make the slider container responsive */
+.testimonial-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* Make each testimonial take up the full width on mobile */
+.testimonial-item {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%; /* Ensure the item takes up 100% of the width */
+    max-width: 100%; /* Prevent overflow */
+    min-height: 300px; /* Ensure minimum consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ensure blockquote doesn't overflow */
+blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 100%; /* Ensure the blockquote doesn't overflow */
+    word-wrap: break-word;
+}
+
+/* Responsive testimonial author section */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Make the author image responsive */
+.testimonial-author img {
+    border-radius: 50%;
+    width: 60px; /* Set a consistent width for the image */
+    height: 60px; /* Set a consistent height for the image */
+    object-fit: cover; /* Make sure the image scales properly */
+    margin-right: 15px;
+}
+
+/* Ensure the text wraps properly */
+.testimonial-author p {
+    margin: 0;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+
+/* General mobile adjustments */
+@media (max-width: 768px) {
+    .testimonial-item {
+        padding: 10px;
+    }
+
+    .testimonial-author img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Fix for the slider container */
+.testimonial-carousel {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for slider items */
+    overflow: hidden;
+    width: 100%;
+    position: relative; /* Allow dots to be positioned */
+}
+
+/* Testimonial item fixes */
+.testimonial-item {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%; /* Take full width */
+    min-height: 300px; /* Consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Prevent text cut off */
+}
+
+/* Ensure blockquote doesn't overflow */
+blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow: visible; /* Ensure the blockquote isn't cut off */
+}
+
+/* Responsive testimonial author section */
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Make the author image responsive */
+.testimonial-author img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Ensure text wraps properly */
+.testimonial-author p {
+    margin: 0;
+    font-size: 0.9em;
+    word-wrap: break-word;
+}
+
+/* Restore dots for carousel */
+.slick-dots {
+    position: absolute;
+    bottom: -30px; /* Move the dots below the slider */
+    width: 100%;
+    text-align: center;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #333;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #000;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .testimonial-item {
+        padding: 10px;
+    }
+
+    .testimonial-author img {
+        width: 50px;
+        height: 50px;
+    }
+
+    blockquote {
+        font-size: 0.9em; /* Slightly smaller text on mobile */
+    }
+
+    .slick-dots {
+        bottom: -20px; /* Adjust dots for mobile */
     }
 }
