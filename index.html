@@ -126,17 +126,66 @@
         </ul>
     </section>
 
-    <!-- Endorsements from Industry Leaders -->
-    <section class="testimonial">
+    <!-- Enhanced Testimonials Section -->
+    <section class="testimonials">
         <h2>Endorsements from Industry Leaders</h2>
-        <div class="testimonial-item">
-            <p>"Timothy's leadership on the 'Discover Culture' initiative increased our user engagement by 30% and boosted operational efficiency by 25%. His vision reshaped our approach to cultural representation." - <em>KSA Ministry of Culture</em></p>
-        </div>
-        <div class="testimonial-item">
-            <p>"Under Timothy's guidance as CTO, Infijoy experienced a 60% improvement in platform performance and a 50% reduction in time-to-market. His innovative strategies were instrumental in our global expansion." - <em>CEO, Infijoy</em></p>
-        </div>
-        <div class="testimonial-item">
-            <p>"Timothy's expertise in automating complex financial processes reduced our decision-making time dramatically and enhanced our risk management capabilities." - <em>Senior VP, Citigroup</em></p>
+        <div class="testimonial-carousel">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"<strong>Timothy's strategic vision and leadership are truly exceptional.</strong> During our time at IBS Group, his professionalism and initiative were instrumental in driving success across teams. He wasn't afraid to make difficult decisions and took full responsibility for them, showcasing his high level of expertise. <strong>Timothy's ability to lead and inspire makes him an outstanding candidate for any high-level board position.</strong>"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="headshots/pavel-rodenkov.jpg" alt="Pavel Rodenkov">
+                    <p><strong>Pavel Rodenkov</strong>, <br>Team Lead, IBS Group</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"<strong>Having mentored Timothy, I can attest to his exceptional leadership and technical expertise.</strong> His knowledge in Java, React, DevOps, and tech leadership is impressive, and he applies it effectively to drive real-world results. His relentless work ethic and innovative problem-solving skills set him apart. <strong>Timothy fosters a collaborative environment where teams thrive, making him invaluable to any organization seeking transformative leadership at the board level.</strong>"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="headshots/nukri-basharuli.jpg" alt="Nukri Basharuli">
+                    <p><strong>Nukri Basharuli</strong>, <br>Founder, Love & Startups</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"<strong>Timothy is a proactive leader with exceptional problem-solving abilities.</strong> During our collaboration, his vast experience and eagerness to learn were evident. He consistently enhanced team dynamics and project outcomes. <strong>His professional approach and dedication to excellence are exactly what organizations need at the board level to drive innovation and growth.</strong>"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="headshots/mubashar-ali.jpg" alt="Mubashar Ali-ACCA">
+                    <p><strong>Mubashar Ali-ACCA</strong>, <br>Accounting and Finance Manager</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"<strong>Timothy's leadership significantly improved our development process.</strong> His innovative ideas and open-minded approach led to the delivery of high-quality applications. His ability to foster teamwork and his extensive experience were key factors in our success. <strong>Timothy's strategic thinking and collaborative skills make him an excellent candidate for board positions requiring forward-thinking leadership.</strong>"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="headshots/iskandar-abdunosirov.jpg" alt="Iskandar Abdunosirov">
+                    <p><strong>Iskandar Abdunosirov</strong>, <br>Senior Frontend Developer</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-item">
+                <blockquote>
+                    <p>"<strong>Timothy's dedication and methodical approach are exemplary.</strong> As a team lead at IronFX, he demonstrated exceptional passion and skill, driving his team to achieve outstanding results. His ability to listen and incorporate feedback, combined with his top-tier software development expertise, make him an asset to any organization. <strong>Timothy's leadership qualities are exactly what's needed at the board level to steer companies toward innovation and success.</strong>"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="headshots/thomas-hansen.jpg" alt="Thomas Hansen">
+                    <p><strong>Thomas Hansen</strong>, <br>CEO, AINIRO</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -206,5 +255,44 @@
     <p>&copy; 2023-2024 Timothy Ivaikin. All rights reserved.</p>
     <p>Connect on <a href="https://www.linkedin.com/in/timothyivaikin" target="_blank" style="color: white;">LinkedIn</a></p>
 </footer>
+
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+
+<!-- jQuery and Slick Carousel JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Ensure the carousel initializes after all content is loaded
+        $('.testimonial-carousel').slick({
+            dots: true,
+            infinite: true,
+            arrows: true, // Enable arrows for better navigation (if desired)
+            autoplay: true,
+            autoplaySpeed: 5000, // Reduced autoplay speed for better interaction
+            adaptiveHeight: true, // Adjust height based on content
+            speed: 600, // Animation speed
+            fade: false, // Set true if you prefer a fade effect
+            pauseOnHover: true, // Pause on mouse hover
+            responsive: [
+                {
+                    breakpoint: 768, // For mobile devices
+                    settings: {
+                        dots: true,
+                        arrows: false // Disable arrows for mobile
+                    }
+                }
+            ]
+        });
+
+        // Error Handling: Log issues if Slick doesn't initialize correctly
+        if (!$('.testimonial-carousel').hasClass('slick-initialized')) {
+            console.error('Slick Carousel failed to initialize. Please check your structure and JS integration.');
+        }
+    });
+</script>
 </body>
 </html>

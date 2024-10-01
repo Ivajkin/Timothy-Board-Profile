@@ -140,6 +140,86 @@ footer p {
     margin: 5px 0;
 }
 
+/* Testimonials Section */
+.testimonials {
+    background-color: var(--background-color);
+    padding: 40px 20px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.testimonial-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial-item blockquote {
+    font-size: 1.1em;
+    line-height: 1.8;
+    position: relative;
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+    color: var(--secondary-color);
+}
+
+.testimonial-item blockquote:before {
+    content: open-quote;
+    font-size: 4em;
+    color: var(--primary-color);
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.testimonial-item blockquote p {
+    display: inline;
+}
+
+.testimonial-item blockquote strong {
+    color: var(--primary-color);
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.testimonial-author p br {
+    display: none;
+}
+
+/* Slick Carousel Dots */
+.slick-dots li button:before {
+    color: var(--primary-color);
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     header h1 {
@@ -174,5 +254,19 @@ footer p {
 
     .button, .social-links a {
         width: 100%;
+    }
+}
+
+/* Additional responsive styles for testimonials */
+@media (max-width: 768px) {
+    .testimonial-item blockquote {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-author img {
+        width: 60px;
+        height: 60px;
     }
 }
